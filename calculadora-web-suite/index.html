@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <div id="overlay"></div>
+
     <header>
         <ul>
             <li id="botao-abrir-menu">
@@ -25,8 +27,6 @@
         </ul>
     </header>
 
-    <div id="overlay"></div>
-
     <aside id="menu-lateral">
         <div id="inicio-menu-lateral">
             <img src="assets/img/logo-tema-claro.png" alt="Logo Site">
@@ -36,7 +36,7 @@
         </div>
         <div id="opcoes-menu-lateral">
             <nav id="opcoes-menu-lateral-calculadoras">
-                <p>CALCULADORAS</p>
+                <h2>CALCULADORAS</h2>
                 <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg> <p>Aritmética</p>
                 </a>
@@ -54,7 +54,7 @@
                 </a>
             </nav>
             <nav id="opcoes-menu-lateral-outros">
-                <p>OUTROS</p>
+                <h2>OUTROS</h2>
                 <a href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> <p>Painel de Atividades</p>
                 </a>
@@ -72,31 +72,33 @@
                 <p>Uma plataforma que reúne diferentes ferramentas de cálculo em um só lugar, oferecendo praticidade e facilidade para resolver operações matemáticas, realizar conversões e obter resultados de forma rápida e simples.</p>
             </section>
             <section id="escolha-calculadora">
-                <h2>Explore as Calculadoras</h2>
-                <article class="opcoes-calculadora">
-                    <div class="titulos-opcao-calculadora"><img src="assets/icons/calculators-icons/calc_aritmetica.svg" alt="Imagem calculadora aritmética"><h3>Aritmética</h3></div>
-                    <p>Realize operações matemáticas básicas, como adição, subtração, multiplicação, divisão e porcentagem.</p>
-                </article>
-                <article class="opcoes-calculadora">
-                    <div class="titulos-opcao-calculadora"><img src="assets/icons/calculators-icons/calc_imc.svg" alt="Imagem calculadora de IMC"><h3>IMC</h3></div>
-                    <p>Calcule o Índice de Massa Corporal (IMC) a partir do peso e da altura informados.</p>
-                </article>
-                <article class="opcoes-calculadora">
-                    <div class="titulos-opcao-calculadora"><img src="assets/icons/calculators-icons/calc_juros.svg" alt="Imagem calculadora de juros"><h3>Juros</h3></div>
-                    <p>Calcule juros simples e compostos, simulando o crescimento de valores ao longo do tempo.</p>
-                </article>
-                <article class="opcoes-calculadora">
-                    <div class="titulos-opcao-calculadora"><img src="assets/icons/calculators-icons/conversor_bases.svg" alt="Imagem conversor de bases"><h3>Bases Numéricas</h3></div>
-                    <p>Converta números entre os sistemas decimal, binário, octal e hexadecimal de forma rápida e prática.
-                    </p>
-                </article>
-                <article class="opcoes-calculadora">
-                    <div class="titulos-opcao-calculadora"><img src="assets/icons/calculators-icons/calc_geometrica.svg" alt=""><h3>Geométrica</h3></div>
-                    <p>Calcule áreas, perímetros e volumes de diferentes figuras planas e sólidos geométricos.</p>
-                </article>
+                <h2 class="subtitulo">Explore as Calculadoras</h2>
+                <div id="container-calculadoras">
+                    <a href="#" class="opcoes-calculadora">
+                        <div class="titulos-opcao-calculadora"><span class="icone-calculadora icone-aritmetica"><img src="assets/icons/calculators-icons/calc_aritmetica.svg" alt="Imagem calculadora aritmética"></span><h3>Aritmética</h3></div>
+                        <p>Realize operações matemáticas básicas, como adição, subtração, multiplicação, divisão e porcentagem.</p>
+                    </a>
+                    <a href="#" class="opcoes-calculadora">
+                        <div class="titulos-opcao-calculadora"><span class="icone-calculadora icone-imc"><img src="assets/icons/calculators-icons/calc_imc.svg" alt="Imagem calculadora de IMC"></span><h3>IMC</h3></div>
+                        <p>Calcule o Índice de Massa Corporal (IMC) a partir do peso e da altura informados.</p>
+                    </a>
+                    <a href="#" class="opcoes-calculadora">
+                        <div class="titulos-opcao-calculadora"><span class="icone-calculadora icone-juros"><img src="assets/icons/calculators-icons/calc_juros.svg" alt="Imagem calculadora de juros"></span><h3>Juros</h3></div>
+                        <p>Calcule juros simples e compostos, simulando o crescimento de valores ao longo do tempo.</p>
+                    </a>
+                    <a href="#" class="opcoes-calculadora">
+                        <div class="titulos-opcao-calculadora"><span class="icone-calculadora icone-bases"><img src="assets/icons/calculators-icons/conversor_bases.svg" alt="Imagem conversor de bases"></span><h3>Bases Numéricas</h3></div>
+                        <p>Converta números entre os sistemas decimal, binário, octal e hexadecimal de forma rápida e prática.
+                        </p>
+                    </a>
+                    <a href="#" class="opcoes-calculadora">
+                        <div class="titulos-opcao-calculadora"><span class="icone-calculadora icone-geometrica"><img src="assets/icons/calculators-icons/calc_geometrica.svg" alt=""></span><h3>Geométrica</h3></div>
+                        <p>Calcule áreas, perímetros e volumes de diferentes figuras planas e sólidos geométricos.</p>
+                    </a>
+                </div>
             </section>
             <section id="painel-atividades">
-                <h2>Painel de Atividades</h2>
+                <h2 class="subtitulo">Painel de Atividades</h2>
                 <article id="atividades">
                     <div id="calculos-realizados">
                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>

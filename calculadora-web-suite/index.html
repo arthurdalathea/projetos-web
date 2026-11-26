@@ -13,15 +13,19 @@
         <ul>
             <li id="botao-abrir-menu">
                 <button>
-                    <svg id="icone-menu" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M3 6h18"/><path d="M3 18h18"/></svg>
+                    <svg id="icone-menu" class="icone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18"/><path d="M3 6h18"/><path d="M3 18h18"/></svg>
                 </button>
             </li>
             <li id="logo">
-                <img src="assets/img/logo-tema-claro-pequena.png" alt="Logo Site">
+                <img id="logo-pequena-tema-claro" src="assets/img/logo-tema-claro-pequena.png" alt="Logo Site">
+                <img id="logo-pequena-tema-escuro" class="desaparecer" src="assets/img/logo-tema-escuro-pequena.png" alt="Logo Site">
+
             </li>
             <li id="botao-tema">
                 <button>
-                    <svg id="icone-tema" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                    <svg id="icone-sol" class="icone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+
+                    <svg id="icone-lua" class="icone desaparecer" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
                 </button>
             </li>
         </ul>
@@ -29,9 +33,10 @@
 
     <aside id="menu-lateral">
         <div id="inicio-menu-lateral">
-            <img src="assets/img/logo-tema-claro.png" alt="Logo Site">
+            <img id="logo-tema-claro" src="assets/img/logo-tema-claro.png" alt="Logo Site">
+            <img id="logo-tema-escuro" class="desaparecer" src="assets/img/logo-tema-escuro.png" alt="Logo Site">
             <button id="botao-fechar-menu">
-                <img src="assets/icons/x.svg" alt="Botao fechar menu">
+                <svg class="icone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x preview-icon"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
             </button>
         </div>
         <div id="opcoes-menu-lateral">
@@ -68,7 +73,7 @@
     <main>
         <section id="tela-inicial">
             <section id="introducao">
-                <h1>Calculadora Web Suite</h1>
+                <h1 class="titulo">Calculadora Web Suite</h1>
                 <p>Uma plataforma que reúne diferentes ferramentas de cálculo em um só lugar, oferecendo praticidade e facilidade para resolver operações matemáticas, realizar conversões e obter resultados de forma rápida e simples.</p>
             </section>
             <section id="escolha-calculadora">
@@ -179,7 +184,6 @@
                         <p>Cálculos guardados</p>
                     </div>
                     <p>O histórico armazena apenas os cálculos realizados nos <strong>últimos 14 dias.</strong></p>
-            
                 </article>
             </section>
         </section>

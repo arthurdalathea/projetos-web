@@ -23,9 +23,34 @@
 
     --fonte-principal: 'Inter', sans-serif;
     --fonte-secundaria: 'Roboto Condensed', sans-serif
+
+    /* Calculadora Aritmética */
+    --cor-destaque-aritmetica: #2563EB;
+    --cor-destaque-hover-aritmetica: #1D4ED8;
+    --cor-fundo-destaque-aritmetica: #EFF6FF;
+
+    /* Calculadora IMC */
+    --cor-destaque-imc: #0D9488;
+    --cor-destaque-hover-imc: #0F766E;
+    --cor-fundo-destaque-imc: #F0FDFA;
+
+    /* Calculadora de Juros */
+    --cor-destaque-juros: #16A34A;
+    --cor-destaque-hover-juros: #15803D;
+    --cor-fundo-destaque-juros: #F0FDF4;
+
+    /* Calculadora de Bases Numéricas */
+    --cor-destaque-bases: #D97706;
+    --cor-destaque-hover-bases: #B45309;
+    --cor-fundo-destaque-bases: #FFFBEB;
+
+    /* Calculadora Geométrica */
+    --cor-destaque-geometrica: #9333EA;
+    --cor-destaque-hover-geometrica: #7E22CE;
+    --cor-fundo-destaque-geometrica: #FAF5FF;
 }
 
-[data-theme="dark"] {
+body.dark {
     --cor-fundo: #080d20;
     --cor-cards: #111a30;
     --cor-bordas: #26334d;
@@ -39,41 +64,31 @@
     --fundo-icone-juros: #052E16;
     --fundo-icone-bases: #451A03;
     --fundo-icone-geometrica: #3B0764;
-}
 
-/* Calculadora Aritmética */
-.calculadora-aritmetica {
-    --cor-destaque: #2563EB;
-    --cor-destaque-hover: #1D4ED8;
-    --cor-fundo-destaque: #EFF6FF;
-}
+    /* Calculadora Aritmética */
+    --cor-destaque-aritmetica: #60A5FA;
+    --cor-destaque-hover-aritmetica: #93C5FD;
+    --cor-fundo-destaque-aritmetica: #172554;
 
-/* Calculadora IMC */
-.calculadora-imc {
-    --cor-destaque: #0D9488;
-    --cor-destaque-hover: #0F766E;
-    --cor-fundo-destaque: #F0FDFA;
-}
+    /* Calculadora IMC */
+    --cor-destaque-imc: #2DD4BF;
+    --cor-destaque-hover-imc: #5EEAD4;
+    --cor-fundo-destaque-imc: #042F2E;
 
-/* Calculadora de Juros */
-.calculadora-juros {
-    --cor-destaque: #16A34A;
-    --cor-destaque-hover: #15803D;
-    --cor-fundo-destaque: #F0FDF4;
-}
+    /* Calculadora de Juros */
+    --cor-destaque-juros: #4ADE80;
+    --cor-destaque-hover-juros: #86EFAC;
+    --cor-fundo-destaque-juros: #052E16;
 
-/* Calculadora de Bases Numéricas */
-.calculadora-bases {
-    --cor-destaque: #D97706;
-    --cor-destaque-hover: #B45309;
-    --cor-fundo-destaque: #FFFBEB;
-}
+    /* Calculadora de Bases Numéricas */
+    --cor-destaque-bases: #FBBF24;
+    --cor-destaque-hover-bases: #FCD34D;
+    --cor-fundo-destaque-bases: #451A03;
 
-/* Calculadora Geométrica */
-.calculadora-geometrica {
-    --cor-destaque: #9333EA;
-    --cor-destaque-hover: #7E22CE;
-    --cor-fundo-destaque: #FAF5FF;
+    /* Calculadora Geométrica */
+    --cor-destaque-geometrica: #C084FC;
+    --cor-destaque-hover-geometrica: #D8B4FE;
+    --cor-fundo-destaque-geometrica: #3B0764;
 }
 
 /* ==============================
@@ -102,6 +117,25 @@ main {
 
 p {
     color: var(--cor-texto-secundario);
+}
+
+.titulo {
+    font-size: clamp(1.8rem, 5vw + 0.7rem, 2.5rem);
+    margin-bottom: 15px;
+    font-weight: 500;
+    color: var(--cor-texto-principal);
+}
+
+.subtitulo {
+    font-family: var(--fonte-secundaria);
+    font-weight: 400;
+    font-size: clamp(1.5rem, 2.5vw + 0.8rem, 2rem);
+    margin: 30px 0px;
+    color: var(--cor-texto-principal);
+}
+
+.icone {
+    stroke: var(--cor-texto-principal);
 }
 
 /* HEADER */
@@ -140,6 +174,10 @@ header img {
 header img:hover {
     cursor: pointer;
     width: 135px;
+}
+
+.desaparecer {
+    display: none;
 }
 
 /* MENU LATERAL E SUAS RESPONSIVIDADES */
@@ -194,11 +232,18 @@ header img:hover {
 
 #inicio-menu-lateral button {
     width: 30px;
+    margin-right: 10px;
+
+    svg {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 #inicio-menu-lateral button:hover {
     width: 35px;
     cursor: pointer;
+
 }
 
 #menu-lateral h2 {
@@ -227,7 +272,7 @@ header img:hover {
     }
 }
 
-#menu-lateral svg {
+#opcoes-menu-lateral svg {
     width: 35px;
     padding: 3px;
     stroke: var(--cor-texto-secundario);
@@ -242,13 +287,6 @@ header img:hover {
 #introducao {
     padding: 16px;
     border-bottom: 1px solid var(--cor-bordas);
-    margin-bottom: 20px;
-}
-
-#introducao h1 {
-    font-size: clamp(1.8rem, 5vw + 0.7rem, 2.5rem);
-    margin-bottom: 15px;
-    font-weight: 500;
 }
 
 #introducao p {
@@ -260,13 +298,6 @@ header img:hover {
 
 #escolha-calculadora {
     padding: 16px;
-}
-
-.subtitulo {
-    font-family: var(--fonte-secundaria);
-    font-weight: 400;
-    font-size: clamp(1.5rem, 2.5vw + 0.8rem, 2rem);
-    margin-bottom: 30px;
 }
 
 #container-calculadoras {
@@ -296,7 +327,7 @@ header img:hover {
 
 .opcoes-calculadora:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 20px var(--cor-bordas);
 
     .icone-calculadora {
         transform: scale(1.1);
@@ -305,6 +336,7 @@ header img:hover {
 
 .opcoes-calculadora h3 {
     font-weight: 500;
+    color: var(--cor-texto-principal);
 }
 
 .opcoes-calculadora p {
@@ -356,11 +388,12 @@ header img:hover {
     background-color: var(--fundo-icone-geometrica);
 }
 
+/* PAINEL DE ATIVIDADES */
 
-
-
-
-
-
-
-
+#painel-atividades {
+    border: 1px solid var(--cor-bordas);
+    border-radius: 25px;
+    margin: 16px;
+    padding: 10px;
+    background-color: var(--cor-cards);
+}
